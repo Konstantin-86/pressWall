@@ -1,0 +1,43 @@
+.service__inner {
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
+  margin-bottom: 89px;
+}
+.service-item {
+  text-align: center;
+}
+.service-item__image {
+  display: block;
+  margin: 0 auto;
+  width: 124px;
+  height: 124px;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+.service-item__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.service-item__button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  font-weight: 700;
+  font-size: 18px;
+  transition: all 0.2s;
+  margin-bottom: 16px;
+  @include hover {
+    color: #fff;
+    background-color: var(--accent);
+    border: 1px solid #fff;
+  }
+}
+.service-item__text {
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+}

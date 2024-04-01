@@ -1,0 +1,46 @@
+.photo-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.photo__slider {
+  position: relative;
+  margin-bottom: 125px;
+}
+
+.mySlider1 {
+  width: 1120px;
+  height: 209px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "";
+}
+.mySlider1-innerButtons {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.mySlider1-prev,
+.mySlider1-next {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #29abe2;
+}
+.mySlider1-prev {
+  img {
+    rotate: (180deg);
+  }
+}
+.mySlider1-prev.swiper-button-disabled,
+.mySlider1-next.swiper-button-disabled {
+  opacity: 0.5;
+}
