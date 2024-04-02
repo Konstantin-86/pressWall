@@ -51,18 +51,11 @@ navListLink.forEach((element) => {
   element.addEventListener("click", () => {
     nav__burger.classList.remove("active");
     document.querySelector(".nav-list").classList.remove("active");
-    nav__burger.style.backgroundImage = "url(../img/menuIcon.svg)";
   });
 });
 
 nav__burger.addEventListener("click", () => {
   nav__burger.classList.toggle("active");
-  if (nav__burger.classList.contains("active")) {
-    nav__burger.style.backgroundImage = "url(../img/menuCloseIcon.png)";
-  } else {
-    nav__burger.style.backgroundImage = "url(../img/menuIcon.svg)";
-  }
-
   document.querySelector(".nav-list").classList.toggle("active");
 });
 

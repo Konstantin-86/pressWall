@@ -24,6 +24,7 @@
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    margin-bottom: 0;
   }
 }
 .whyWe__item {
@@ -37,10 +38,6 @@
     }
   }
 }
-.whyWe-list {
-}
-.whyWe-list__item {
-}
 .list-item__wrap {
   display: flex;
   gap: 16px;
@@ -49,7 +46,7 @@
   }
 }
 .list-item-elem__number {
-  background-image: url(../../img/list-ellips.png);
+  background-image: url(../img/list-ellips.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 64px;
@@ -66,14 +63,6 @@
 }
 .text-right {
   text-align: right;
-}
-.whyWe-list {
-}
-.whyWe-list__item {
-}
-.list-item__wrap {
-}
-.list-item-elem__number {
 }
 .list-item-elem__text {
   max-width: 315px;
@@ -95,6 +84,9 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 128px;
+  @include tablet {
+    flex-wrap: wrap;
+  }
 }
 .whyWe-footer-item {
   display: flex;

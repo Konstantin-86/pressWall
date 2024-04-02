@@ -1,5 +1,5 @@
 .header__inner {
-  background-image: url(../../img/mainBg.png);
+  background-image: url(../img/mainBg.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -78,6 +78,14 @@
     background-size: contain;
   }
 }
+.nav__burger.active {
+  @include tablet {
+    display: block;
+    background-image: url(../img/menuCloseIcon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
 
 .nav-list__link {
   position: relative;
@@ -128,7 +136,7 @@
     content: "";
     width: 32px;
     height: 32px;
-    background-image: url(../../img/phone.svg);
+    background-image: url(../img/phone.svg);
     background-repeat: no-repeat;
     top: 50%;
     transform: translateY(-50%);
