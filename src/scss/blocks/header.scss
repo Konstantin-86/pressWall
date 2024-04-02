@@ -30,17 +30,50 @@
   gap: 24px;
   @include tablet {
     position: absolute;
-    top: -200%;
+    top: -500px;
+    right: -5px;
+    width: 250px;
+    height: 50dvh;
+    display: flex;
+    border-radius: 0 0 0 10px;
+    flex-direction: column;
+    gap: 10px;
+    background: linear-gradient(
+      90deg,
+      rgb(0, 135, 192),
+      rgb(90, 206, 255) 100%
+    );
+    transition: all 0.3s ease-in;
   }
 }
+
+.nav-list.active {
+  @include tablet {
+    top: 0;
+    right: -5px;
+    width: 250px;
+    height: 50dvh;
+    display: flex;
+    border-radius: 0 0 0 10px;
+    flex-direction: column;
+    gap: 10px;
+    background: linear-gradient(
+      90deg,
+      rgb(0, 135, 192),
+      rgb(90, 206, 255) 100%
+    );
+  }
+}
+
 .nav__burger {
+  position: relative;
+  z-index: 101;
   display: none;
   width: 35px;
   height: 35px;
-  /*  background-color: var(--accent); */
   @include tablet {
     display: block;
-    background-image: url(../../img/menuIcon.svg);
+    background-image: url(../img/menuIcon.svg);
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -70,6 +103,9 @@
     background-color: #b7b7b7;
     transition: all 0.2s;
     transform-origin: left;
+    @include tablet {
+      display: none;
+    }
   }
 }
 .nav-phone {

@@ -8,6 +8,7 @@
   }
 }
 .price-item {
+  cursor: pointer;
   img {
     display: block;
     width: 295px;
@@ -18,9 +19,11 @@
 }
 .price-item__title {
   text-align: center;
-  /*  color: var(--accent); */
   font-size: 28px;
   font-weight: 500;
+}
+.price-item__title--active {
+  color: var(--accent);
 }
 .view-title {
   font-size: 48px;
@@ -49,7 +52,7 @@
     display: block;
     width: 470px;
     height: 388px;
-    object-fit: cover;
+    object-fit: contain;
     @include mobile-s {
       max-width: 100%;
       width: 100%;

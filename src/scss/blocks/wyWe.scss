@@ -20,9 +20,22 @@
 .whyWe__inner {
   display: flex;
   margin-bottom: 64px;
+  @include tablet {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
 }
 .whyWe__item {
   width: 33.3%;
+  @include tablet {
+    text-align: center;
+    width: 100%;
+    &:nth-child(2) {
+      order: -1;
+      margin-bottom: 20px;
+    }
+  }
 }
 .whyWe-list {
 }
@@ -31,6 +44,9 @@
 .list-item__wrap {
   display: flex;
   gap: 16px;
+  @include tablet {
+    justify-content: center;
+  }
 }
 .list-item-elem__number {
   background-image: url(../../img/list-ellips.png);

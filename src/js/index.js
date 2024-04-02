@@ -39,3 +39,65 @@ const swiperSecond = new Swiper(".ourWork-Slider", {
     },
   },
 });
+
+const priceItem = document.querySelectorAll(".price-item");
+const pricetitle = document.querySelectorAll(".price-item__title");
+const viewTitle = document.querySelector(".view-title");
+const priceImage = document.querySelector(".price-item__image");
+const nav__burger = document.querySelector(".nav__burger");
+const navListLink = document.querySelectorAll(".nav-list__link");
+
+navListLink.forEach((element) => {
+  element.addEventListener("click", () => {
+    nav__burger.classList.remove("active");
+    document.querySelector(".nav-list").classList.remove("active");
+    nav__burger.style.backgroundImage = "url(../img/menuIcon.svg)";
+  });
+});
+
+nav__burger.addEventListener("click", () => {
+  nav__burger.classList.toggle("active");
+  if (nav__burger.classList.contains("active")) {
+    nav__burger.style.backgroundImage = "url(../img/menuCloseIcon.png)";
+  } else {
+    nav__burger.style.backgroundImage = "url(../img/menuIcon.svg)";
+  }
+
+  document.querySelector(".nav-list").classList.toggle("active");
+});
+
+const changeTitle = (text) => {
+  const span = viewTitle.querySelector("span");
+  span.textContent = text;
+};
+const changeSrc = (text) => {
+  if (text === "Простой") {
+    priceImage.src = "./img/price1.png";
+  }
+  if (text === "Закрытый") {
+    priceImage.src = "./img/price2.png";
+  }
+  if (text === "Сложный") {
+    priceImage.src = "./img/price3.png";
+  }
+  if (text === "Круглый") {
+    priceImage.src = "./img/price4.png";
+  }
+};
+
+const resetColor = () => {
+  priceItem.forEach((element) => {
+    const headerText = element.querySelector("h3");
+    headerText.style.color = "var(--text)";
+  });
+};
+
+priceItem.forEach((element) => {
+  element.addEventListener("click", () => {
+    const headerText = element.querySelector("h3");
+    resetColor();
+    headerText.style.color = "var(--accent)";
+    changeTitle(headerText.textContent);
+    changeSrc(headerText.textContent);
+  });
+});
