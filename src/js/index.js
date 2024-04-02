@@ -46,6 +46,38 @@ const viewTitle = document.querySelector(".view-title");
 const priceImage = document.querySelector(".price-item__image");
 const nav__burger = document.querySelector(".nav__burger");
 const navListLink = document.querySelectorAll(".nav-list__link");
+const serviceItemButton = document.querySelectorAll(".service-item__button");
+const popUp = document.querySelector(".popUp");
+const button = document.querySelectorAll(".button");
+
+const popUpHandler = () => {
+  setTimeout(() => {
+    document.addEventListener("click", function listen(event) {
+      const element = event.target;
+
+      if (element != popUp && !popUp.contains(element)) {
+        popUp.classList.remove("active");
+        document.body.style.overflow = "auto";
+        document.removeEventListener("click", listen);
+      }
+    });
+  });
+
+  popUp.classList.add("active");
+  document.body.style.overflow = "hidden";
+};
+
+button.forEach((element) => {
+  element.addEventListener("click", () => {
+    popUpHandler();
+  });
+});
+
+serviceItemButton.forEach((element) => {
+  element.addEventListener("click", () => {
+    popUpHandler();
+  });
+});
 
 navListLink.forEach((element) => {
   element.addEventListener("click", () => {
