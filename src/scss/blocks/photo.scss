@@ -11,6 +11,15 @@
 .mySlider1 {
   width: 1120px;
   height: 209px;
+  @include tablet {
+    width: 100%;
+  }
+}
+.mySlider1-slide {
+  img {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 .swiper-button-prev::after,
@@ -19,6 +28,7 @@
 }
 .mySlider1-innerButtons {
   position: absolute;
+  z-index: 100;
   width: 100%;
   display: flex;
   justify-content: space-between;

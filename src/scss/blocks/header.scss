@@ -4,22 +4,48 @@
   background-size: cover;
 }
 .nav {
+  position: relative;
   padding-top: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include tablet {
+    justify-content: start;
+    padding-top: 20px;
+  }
+  @include mobile-s {
+    align-items: start;
+  }
 }
 .logo {
   max-width: 141px;
+  @include tablet {
+    margin-right: auto;
+  }
 }
 .nav-list {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 24px;
+  @include tablet {
+    position: absolute;
+    top: -200%;
+  }
 }
-.nav-list__item {
+.nav__burger {
+  display: none;
+  width: 35px;
+  height: 35px;
+  /*  background-color: var(--accent); */
+  @include tablet {
+    display: block;
+    background-image: url(../../img/menuIcon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
+
 .nav-list__link {
   position: relative;
   padding: 16px;
@@ -52,6 +78,15 @@
   font-size: 22px;
   font-weight: 500;
   transition: all 0.2s;
+  @include hover {
+    color: var(--accent);
+  }
+  @include tablet {
+    margin-right: 20px;
+  }
+  @include mobile-s {
+    display: none;
+  }
   &::after {
     position: absolute;
     content: "";
@@ -63,31 +98,48 @@
     transform: translateY(-50%);
     left: -35px;
   }
-  @include hover {
-    color: var(--accent);
-  }
 }
-.main {
-}
+
 .main__wrap {
   display: flex;
+  @include mobile {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 .main__item {
 }
 .main__item__text {
   padding-top: 85px;
+  @include mobile {
+    padding-top: 50px;
+  }
 }
 .main-text {
   font-size: 28px;
   max-width: 316px;
   font-weight: 500;
   color: var(--text-color);
+  @include tablet {
+    font-size: 24px;
+  }
+  @include mobile-s {
+    text-align: center;
+    font-size: 18px;
+  }
 }
 .main-title {
   font-weight: 800;
   font-size: 76px;
   white-space: nowrap;
   color: var(--accent);
+  @include tablet {
+    font-size: 60px;
+  }
+  @include mobile-s {
+    text-align: center;
+    font-size: 40px;
+  }
 }
 .main-button {
   margin-top: 56px;
@@ -96,13 +148,12 @@
   padding: 16px 73px;
   color: #ffffff;
   border-radius: 8px;
-  background-color: #0087c0;
+  background: linear-gradient(90deg, rgb(0, 135, 192), rgb(90, 206, 255) 100%);
   font-weight: 700;
   font-size: 18px;
-  border: 1px solid #0087c0;
   transition: all 0.2s;
   @include hover {
-    background-color: #fff;
+    background: #fff;
     color: var(--accent);
   }
 }

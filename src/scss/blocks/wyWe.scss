@@ -12,6 +12,10 @@
     left: 0;
     background-color: var(--accent);
   }
+  @include mobile-s {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
 }
 .whyWe__inner {
   display: flex;

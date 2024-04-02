@@ -1,26 +1,26 @@
 .container {
-	padding: 0 var(--container-padding);
-	max-width: var(--container-width);
-	margin: 0 auto;
+  padding: 0 var(--container-padding);
+  max-width: var(--container-width);
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .container-right {
-	
-	padding-left: calc(
-		(100% - var(--container-width)) / 2 + var(--container-padding)
-	);
+  padding-left: calc(
+    (100% - var(--container-width)) / 2 + var(--container-padding)
+  );
 
-	@media (max-width: var(--laptop-size)) {
-		padding-left: var(--container-padding);
-	}
+  @media (max-width: var(--laptop-size)) {
+    padding-left: var(--container-padding);
+  }
 }
 
 .container-left {
-	padding-right: calc(
-		(100% - var(--container-width)) / 2 + var(--container-padding)
-	);
+  padding-right: calc(
+    (100% - var(--container-width)) / 2 + var(--container-padding)
+  );
 
-	@media (max-width: var(--laptop-size)) {
-		padding-right: var(--container-padding);
-	}
+  @media (max-width: var(--laptop-size)) {
+    padding-right: var(--container-padding);
+  }
 }

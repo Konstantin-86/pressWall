@@ -1,8 +1,20 @@
 const swiper = new Swiper(".mySlider1", {
-  slidesPerView: 4,
+  slidesPerView: 1,
+  spaceBeetwen: 0,
   navigation: {
     nextEl: ".mySlider1-next",
     prevEl: ".mySlider1-prev",
+  },
+  breakpoints: {
+    1280: {
+      slidesPerView: 4,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    480: {
+      slidesPerView: 2,
+    },
   },
 });
 const swiperSecond = new Swiper(".ourWork-Slider", {
